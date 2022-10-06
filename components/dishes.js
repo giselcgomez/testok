@@ -52,6 +52,7 @@ function Dishes({ restId }) {
   console.log(`Restaurant Data: ${JSON.stringify(data.restaurant)}`)
   console.log(`restaurant ID from DISHES: ${restId}`);
 
+  const host1 = process.env.HOST || '0.0.0.0';
 
 
   if (restId != '') {
@@ -61,13 +62,15 @@ function Dishes({ restId }) {
 
         {restaurant.dishes.map((res) => (
 
+
           <Col xs="6" sm="4" key={res.id}>
 
             <Card style={{ margin: "0 0.5rem 20px 0.5rem" }}>
               <CardImg
                 top={true}
                 style={{ height: 200 }}
-                src={`http://localhost:1337${res.image.url}`}
+                //  src={`http://localhost:1337${res.image.url}`}
+                src={host1 + res.image.url}
               />
               <CardBody>
                 <CardTitle>{res.name}</CardTitle>

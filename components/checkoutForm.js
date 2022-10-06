@@ -40,7 +40,7 @@ function CheckoutForm() {
     // // Pass the Element directly to other Stripe.js methods:
     // // e.g. createToken - https://stripe.com/docs/js/tokens_sources/create_token?type=cardElement
     // get token back from stripe to process credit card
-    const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:1337";
+    const API_URL = .NEXT_PUBLIC_API_URL || "http://localhost:1337";
     console.log('this is the API_URL', API_URL);
 
     const token = await stripe.createToken(cardElement);
@@ -61,13 +61,13 @@ function CheckoutForm() {
     if (!response.ok) {
       setError(response.statusText);
       console.log("It was an error with your card, please pay with a correct card")
-  }else {
-    console.log("Your payment was SUCCESSFUL");
-    swal("Your payment has been successful... we are on our Way!");
-    appContext.cart.items = [];
-    appContext.cart.total = 0;
-    router.push("/"); // redirect if you're already logged in
-  };
+    } else {
+      console.log("Your payment was SUCCESSFUL");
+      swal("Your payment has been successful... we are on our Way!");
+      appContext.cart.items = [];
+      appContext.cart.total = 0;
+      router.push("/"); // redirect if you're already logged in
+    };
 
     // OTHER stripe methods you can use depending on app
     // // or createPaymentMethod - https://stripe.com/docs/js/payment_intents/create_payment_method

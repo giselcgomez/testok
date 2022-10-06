@@ -51,17 +51,22 @@ function RestaurantList(props) {
   const renderDishes = (restaurantID) => {
     return (<Dishes restId={restaurantID}> </Dishes>)
   };
+
+  const host1 = process.env.HOST || '0.0.0.0';
+
   if (searchQuery.length > 0) {
     const restList = searchQuery.map((res) => (
-   
-   <Col xs="6" sm="4" key={res.id}>
-    
+
+
+      <Col xs="6" sm="4" key={res.id}>
+
         <Card style={{ margin: "0 0.5rem 20px 0.5rem" }}>
           <CardImg
             top={true}
             style={{ height: 200 }}
             src={
-              `http://localhost:1337` + res.image.url
+              //  `http://localhost:1337` + res.image.url
+              host1 + res.image.url
             }
           />
           <CardBody>

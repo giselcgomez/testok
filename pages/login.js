@@ -41,7 +41,7 @@ function Login(props) {
         <Col sm="12" md={{ size: 5, offset: 3 }}>
           <div className="paper">
             <div className="header">
-              <img className="center" width="150" src="http://localhost:1337/uploads/logo_42bc2192bb.png" />
+              <img className="center" width="150" src="https://content.app-sources.com/s/72345967079823653/uploads/Images/logo_42bc2192bb-5026508.png" />
             </div>
 
 
