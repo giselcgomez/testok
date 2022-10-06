@@ -1,0 +1,16 @@
+DATABASE_CLIENT =mongo
+DATABASE_NAME =strapi
+DATABASE_HOST =mongoexample
+DATABASE_PORT =27017
+DATABASE_USERNAME =strapi
+DATABASE_PASSWORD =tangoman
+MONGO_INITDB_ROOT_USERNAME =strapi
+MONGO_INITDB_ROOT_PASSWORD =tangoman
+DB_URL=mongodb:http://localhost:1337
+NEXT_PUBLIC_API_URL = 
+HOST=http://localhost:1337
+# https://dashboard.stripe.com/apikeys
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_51Lp0IOHhJKo2tNGR5W9nHfnGiajRIUNdi2LGZsZutqI2qH7y4Q1E1TUPczJ1QXDNru0UCIRShrDRcvIsOugmZwzy00BWPELB24
+STRIPE_SECRET_KEY=pk_test_51Lp0IOHhJKo2tNGR5W9nHfnGiajRIUNdi2LGZsZutqI2qH7y4Q1E1TUPczJ1QXDNru0UCIRShrDRcvIsOugmZwzy00BWPELB24
+# Set this environment variable to support webhooks — https://stripe.com/docs/webhooks/signatures
+//STRIPE_WEBHOOK_SECRET=whsec_12345
